@@ -1,0 +1,6 @@
+{
+  "name": "AWS Cost & Architecture Estimator",
+  "description": "Interactive AWS monthly cost modeling and architecture comparison tool for .NET 8/9 workloads across Lambda, EKS, ECS Fargate, RDS, SQS, ALB, and NAT Gateway.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
