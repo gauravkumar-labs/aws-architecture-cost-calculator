@@ -50,7 +50,10 @@ export interface WorkloadPreset {
   name: string;
   subtitle: string;
   dotnetTarget: string;
+  recommendedArchLabel: string;
   summary: string;
+  productExplanation: string;
+  bestFor: string;
   config: Omit<EstimatorConfig, 'presetId'>;
 }
 

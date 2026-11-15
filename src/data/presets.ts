@@ -151,7 +151,11 @@ export const WORKLOAD_PRESETS: WorkloadPreset[] = [
     name: 'Spiky Lead-Processing Webhook API',
     subtitle: 'Burst-heavy ingestion',
     dotnetTarget: '.NET 8 Native AOT Minimal API',
+    recommendedArchLabel: 'Suggested: Serverless (AWS Lambda + Queue)',
     summary: 'Low steady baseline with sudden 8x marketing campaign spikes, SQS buffering, and lean PostgreSQL persistence.',
+    productExplanation:
+      'Works like hailing a rideshare only when a rider shows up. You pay nothing for idle servers overnight; when campaigns trigger 8x spikes, AWS scales instantly and queues jobs safely in SQS.',
+    bestFor: 'Bursty traffic, quiet nights/weekends, and small teams wanting zero server upkeep.',
     config: {
       region: 'us-east-1',
       dotnetMode: 'native-aot',
@@ -183,7 +187,11 @@ export const WORKLOAD_PRESETS: WorkloadPreset[] = [
     name: 'Steady High-Throughput B2B Microservice',
     subtitle: 'Sustained API & worker mesh',
     dotnetTarget: '.NET 9 ASP.NET Core Kestrel + EF Core',
+    recommendedArchLabel: 'Suggested: Always-On Containers (Amazon EKS)',
     summary: 'Consistent 24/7 partner API traffic at 180 RPS with low burst variance, Multi-AZ PostgreSQL, and 1 read replica.',
+    productExplanation:
+      'Works like leasing a dedicated fleet of delivery vans running 24/7. At high, steady volume, always-on Kubernetes containers cost much less per request than pay-per-use Lambda and avoid cold-start delays.',
+    bestFor: 'High-volume 24/7 partner APIs and teams needing multi-cloud Kubernetes portability.',
     config: {
       region: 'us-east-1',
       dotnetMode: 'kestrel-jit',
@@ -215,7 +223,11 @@ export const WORKLOAD_PRESETS: WorkloadPreset[] = [
     name: 'Enterprise Monolith Migration',
     subtitle: 'Legacy WCF / MVC containerization',
     dotnetTarget: '.NET 8 Modular Monolith (Containers)',
+    recommendedArchLabel: 'Suggested: Lift-and-Shift Containers (EKS or Fargate)',
     summary: 'Heavy 2 GB memory footprint, 240ms p95 latency, SQL Server Multi-AZ + read replica, and strict portability requirements.',
+    productExplanation:
+      'Works like moving an established workshop into a modern factory without rebuilding every tool. Heavy apps with large memory and SQL Server are costly on Lambda; containers let you migrate intact and modernize gradually.',
+    bestFor: 'Existing enterprise .NET apps moving off on-prem VMs without a full rewrite.',
     config: {
       region: 'us-east-1',
       dotnetMode: 'kestrel-jit',

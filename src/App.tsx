@@ -7,6 +7,7 @@ import { useMemo, useState } from 'react';
 import { BreakEvenChart } from './components/BreakEvenChart';
 import { CostComparisonPanel } from './components/CostComparisonPanel';
 import { ExportArtifactsPanel } from './components/ExportArtifactsPanel';
+import { GlossaryPanel } from './components/GlossaryPanel';
 import { PresetSelector } from './components/PresetSelector';
 import { SizingControls } from './components/SizingControls';
 import { TradeOffsPanel } from './components/TradeOffsPanel';
@@ -150,6 +151,7 @@ export default function App() {
             <CostComparisonPanel config={config} analysis={analysis} />
             <BreakEvenChart config={config} analysis={analysis} />
             <TradeOffsPanel config={config} />
+            <GlossaryPanel />
             <ExportArtifactsPanel config={config} analysis={analysis} />
           </div>
         </div>
